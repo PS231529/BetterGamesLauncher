@@ -27,17 +27,79 @@ namespace EindopdrachtPRG3
     public partial class MainWindow : Window
     {
         GameDB _GameDB = new GameDB();
-        MySqlConnection _connection = new MySqlConnection("Server=localhost;Database=prg3_eindopdracht;Uid=root;Pwd=;");
-
+        
+        MySqlConnection _connection = new MySqlConnection("Server=localhost;Database=BetterGamesLauncher;Uid=root;Pwd=;");
+        MySqlConnection _checkconnection = new MySqlConnection("Server=localhost;Database=information_schema;Uid=root;Pwd=;");
+        
 
         public MainWindow()
         {
             InitializeComponent();
             //FillDataGrid();
+            bool dbexists = CheckDatabaseExists(_checkconnection, "bettergameslauncher");
+            MessageBox.Show(dbexists.ToString());
 
             myFunction();
 
         }
+        
+        #region OnStartup
+        static void createDatabase(string dbname)
+        {
+            MySqlConnection mainConn = new MySqlConnection("Server=localhost;Uid=root;Pwd=;");
+
+            using (mainConn)
+            {
+                using (MySqlCommand _maincommand = new MySqlCommand("CREATE DATABASE IF NOT EXISTS " + dbname + ";", mainConn))
+                {
+                    mainConn.Open();
+                    _maincommand.ExecuteScalar();
+                    mainConn.Close();
+                }
+            }
+        }
+
+        private static bool CheckDatabaseExists(MySqlConnection tmpConn, string databaseName)
+        {
+            string sqlCreateDBQuery;
+            bool result = false;
+
+
+            try
+            {
+
+                sqlCreateDBQuery = string.Format("SELECT SCHEMA_NAME FROM SCHEMATA WHERE SCHEMA_NAME = '{0}'", databaseName);
+        
+                using (tmpConn)
+                {
+                    using (MySqlCommand sqlCmd = new MySqlCommand(sqlCreateDBQuery, tmpConn))
+                    {
+                        tmpConn.Open();
+
+                        object resultObj = sqlCmd.ExecuteScalar();
+
+                        if (resultObj == null)
+                        {
+
+                            result = true;
+                            createDatabase("bettergameslauncher");
+                        }
+
+                        tmpConn.Close();
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                result = false;
+                MessageBox.Show(ex.Message);
+            }
+
+            return result;
+        }
+       
+        #endregion
 
         private void SelectFavourite()
         {

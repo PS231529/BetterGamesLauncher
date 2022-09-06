@@ -11,9 +11,11 @@ namespace EindopdrachtPRG3.Classes
     class GameDB
     {
         #region fields
-        MySqlConnection _connection = new MySqlConnection("Server=localhost;Database=prg3_eindopdracht;Uid=root;Pwd=;");
+        MySqlConnection _connection = new MySqlConnection("Server=localhost;Database=BetterGamesLauncher;Uid=root;Pwd=;");
         #endregion
 
+
+        
         #region methods/functions
         public DataTable SelectStudents()
         {
