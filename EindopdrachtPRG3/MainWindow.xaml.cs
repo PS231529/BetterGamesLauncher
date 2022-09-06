@@ -401,7 +401,10 @@ namespace EindopdrachtPRG3
                 _connection.Close();
             }
 
-
+        }
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }    
