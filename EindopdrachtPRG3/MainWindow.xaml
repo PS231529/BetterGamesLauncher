@@ -6,10 +6,10 @@
         xmlns:local="clr-namespace:EindopdrachtPRG3"
         mc:Ignorable="d"
         Title="MainWindow" MinHeight="450" MaxHeight="450" MinWidth="800" MaxWidth="800" Height="450" Width="800" Background="#121212" ResizeMode="NoResize" WindowStyle="None">
-     
+
     <Grid>
         <Grid Height="15" VerticalAlignment="Top">
-            <Button Name="CloseButton" Content="" Height="15" Width="15" Background="Red" VerticalAlignment="Top" HorizontalAlignment="Right"  Click="CloseButton_Click">
+            <Button Name="CloseButton" Content="x" Height="24" Width="15" Background="Transparent"  BorderThickness="0" VerticalAlignment="Center" HorizontalAlignment="Left" Click="CloseButton_Click" Margin="785,0,0,0" Foreground="#FF5F5E5E">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -30,7 +30,7 @@
                         <TextBox x:Name="searchBox" Text="Search" Margin="10,10,10,10" Height="20px" Width="150px" VerticalAlignment="Top" BorderBrush="White" Background="#1c1c1c" Foreground="#ffffff" />
                         <Button Width="25" Height="25" Click="search_Click"></Button>
                     </StackPanel>
-                    
+
 
                     <Button Height="30px" Width="100px" Background="Transparent" HorizontalAlignment="Left" Foreground="White" BorderBrush="Transparent" Click="Button_Fav">
                         <StackPanel Orientation="Horizontal">
@@ -70,8 +70,8 @@
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
 
-                
-                
+
+
                 <!--<DataGrid x:Name="dgStudents" SelectionMode="Single" CanUserAddRows="False" AutoGenerateColumns="False">
 
                     <DataGrid.Columns>
