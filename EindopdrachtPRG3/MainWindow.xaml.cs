@@ -1,24 +1,12 @@
 ﻿using EindopdrachtPRG3.Classes;
-using Microsoft.Win32;
 using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace EindopdrachtPRG3
 {
@@ -28,10 +16,10 @@ namespace EindopdrachtPRG3
     public partial class MainWindow : Window
     {
         GameDB _GameDB = new GameDB();
-        
+
         MySqlConnection _connection = new MySqlConnection("Server=localhost;Database=BetterGamesLauncher;Uid=root;Pwd=;");
         MySqlConnection _checkconnection = new MySqlConnection("Server=localhost;Database=information_schema;Uid=root;Pwd=;");
-        
+
 
         public MainWindow()
         {
@@ -43,7 +31,7 @@ namespace EindopdrachtPRG3
             uitlezen();
 
         }
-        
+
         #region OnStartup
         static void createDatabase(string dbname)
         {
@@ -87,7 +75,7 @@ namespace EindopdrachtPRG3
             {
 
                 sqlCreateDBQuery = string.Format("SELECT SCHEMA_NAME FROM SCHEMATA WHERE SCHEMA_NAME = '{0}'", databaseName);
-        
+
                 using (tmpConn)
                 {
                     using (MySqlCommand sqlCmd = new MySqlCommand(sqlCreateDBQuery, tmpConn))
@@ -116,7 +104,7 @@ namespace EindopdrachtPRG3
 
             return result;
         }
-       
+
         #endregion
 
         private void SelectFavourite()
@@ -323,7 +311,7 @@ namespace EindopdrachtPRG3
         private void btn2_Click(object sender, EventArgs e)
         {
             DataTable games = _GameDB.SelectStudents();
-            
+
             Button test = (Button)sender;
 
 
@@ -371,7 +359,7 @@ namespace EindopdrachtPRG3
         private void search_Click(object sender, RoutedEventArgs e)
         {
             string search = searchBox.Text;
-            
+
             DataTable games = _GameDB.ZoekStudents(search);
 
             Main.Children.Clear();
@@ -453,19 +441,21 @@ namespace EindopdrachtPRG3
             //}
 
             var files = Directory.GetDirectories("C:\\Program Files (x86)\\Steam\\steamapps\\common", "*.*", SearchOption.TopDirectoryOnly);
+           
             int xindex = 0;
             int yindex = 0;
             foreach (string file in files)
             {
                 //MessageBox.Show(file.ToString());
+                var map = file.ToString().Split('\\');
                 StackPanel gamens = new StackPanel();
                 TextBlock textBlock = new TextBlock();
-                textBlock.Text = file.ToString(); 
+                textBlock.Text = map[5];
                 gamens.Children.Add(textBlock);
-                Grid.SetRow(gamens, 0+yindex);
+                Grid.SetRow(gamens, 0 + yindex);
                 Grid.SetColumn(gamens, 1 + xindex);
                 Main.Children.Add(gamens);
-                
+
                 if (xindex == 5)
                 {
                     xindex = 0;
@@ -478,7 +468,7 @@ namespace EindopdrachtPRG3
 
 
     }
-}    
+}
 
 
 
