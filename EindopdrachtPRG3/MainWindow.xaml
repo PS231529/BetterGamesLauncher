@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EindopdrachtPRG3"
         mc:Ignorable="d"
-        Title="MainWindow" MinHeight="450" MaxHeight="450" MinWidth="800" MaxWidth="800" Height="450" Width="800" Background="#121212">
+        Title="MainWindow" MinHeight="450" MaxHeight="450" MinWidth="800" MaxWidth="800" Height="450" Width="800" Background="#121212" ResizeMode="NoResize" WindowStyle="None">
+     
     <Grid>
+        <Grid Height="15" VerticalAlignment="Top">
+            <Button Name="CloseButton" Content="" Height="15" Width="15" Background="Red" VerticalAlignment="Top" HorizontalAlignment="Right"  Click="CloseButton_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
+
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*" />
@@ -38,7 +49,7 @@
                 </StackPanel>
 
             </Grid>
-            <Grid x:Name="Main" Grid.Column="1">
+            <Grid x:Name="Main" Grid.Column="1" Height="430" VerticalAlignment="Bottom">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition/>

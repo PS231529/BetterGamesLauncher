@@ -55,3 +55,63 @@ E:\PS231529\Programmeren\Programmeren 3\EindopdrachtPRG3\EindopdrachtPRG3\obj\De
 E:\PS231529\Programmeren\Programmeren 3\EindopdrachtPRG3\EindopdrachtPRG3\obj\Debug\EindopdrachtPRG3.csproj.CopyComplete
 E:\PS231529\Programmeren\Programmeren 3\EindopdrachtPRG3\EindopdrachtPRG3\obj\Debug\EindopdrachtPRG3.exe
 E:\PS231529\Programmeren\Programmeren 3\EindopdrachtPRG3\EindopdrachtPRG3\obj\Debug\EindopdrachtPRG3.pdb
+<<<<<<< HEAD
+E:\SUMMA\repos\BetterGamesLauncher\EindopdrachtPRG3\obj\Debug\EindopdrachtPRG3.csproj.AssemblyReference.cache
+E:\SUMMA\repos\BetterGamesLauncher\EindopdrachtPRG3\obj\Debug\EindopdrachtPRG3.csproj.SuggestedBindingRedirects.cache
+E:\SUMMA\repos\BetterGamesLauncher\EindopdrachtPRG3\obj\Debug\EindopdrachtPRG3.exe.config
+E:\SUMMA\repos\BetterGamesLauncher\EindopdrachtPRG3\obj\Debug\MainWindow.g.cs
+E:\SUMMA\repos\BetterGamesLauncher\EindopdrachtPRG3\obj\Debug\App.g.cs
+E:\SUMMA\repos\BetterGamesLauncher\EindopdrachtPRG3\obj\Debug\EindopdrachtPRG3_MarkupCompile.cache
+E:\SUMMA\repos\BetterGamesLauncher\EindopdrachtPRG3\obj\Debug\EindopdrachtPRG3_MarkupCompile.lref
+E:\SUMMA\repos\BetterGamesLauncher\EindopdrachtPRG3\obj\Debug\EindopdrachtPRG3.exe
+E:\SUMMA\repos\BetterGamesLauncher\EindopdrachtPRG3\obj\Debug\EindopdrachtPRG3.pdb
+E:\SUMMA\repos\BetterGamesLauncher\EindopdrachtPRG3\bin\Debug\EindopdrachtPRG3.exe.config
+E:\SUMMA\repos\BetterGamesLauncher\EindopdrachtPRG3\bin\Debug\EindopdrachtPRG3.exe
+E:\SUMMA\repos\BetterGamesLauncher\EindopdrachtPRG3\bin\Debug\EindopdrachtPRG3.pdb
+E:\SUMMA\repos\BetterGamesLauncher\EindopdrachtPRG3\bin\Debug\Google.Protobuf.dll
+E:\SUMMA\repos\BetterGamesLauncher\EindopdrachtPRG3\bin\Debug\ZstdNet.dll
+E:\SUMMA\repos\BetterGamesLauncher\EindopdrachtPRG3\bin\Debug\K4os.Compression.LZ4.Streams.dll
+E:\SUMMA\repos\BetterGamesLauncher\EindopdrachtPRG3\bin\Debug\BouncyCastle.Crypto.dll
+E:\SUMMA\repos\BetterGamesLauncher\EindopdrachtPRG3\bin\Debug\Ubiety.Dns.Core.dll
+E:\SUMMA\repos\BetterGamesLauncher\EindopdrachtPRG3\bin\Debug\System.Memory.dll
+E:\SUMMA\repos\BetterGamesLauncher\EindopdrachtPRG3\bin\Debug\System.Buffers.dll
+E:\SUMMA\repos\BetterGamesLauncher\EindopdrachtPRG3\bin\Debug\K4os.Compression.LZ4.dll
+E:\SUMMA\repos\BetterGamesLauncher\EindopdrachtPRG3\bin\Debug\K4os.Hash.xxHash.dll
+E:\SUMMA\repos\BetterGamesLauncher\EindopdrachtPRG3\bin\Debug\MySql.Data.xml
+E:\SUMMA\repos\BetterGamesLauncher\EindopdrachtPRG3\obj\Debug\MainWindow.baml
+E:\SUMMA\repos\BetterGamesLauncher\EindopdrachtPRG3\obj\Debug\EindopdrachtPRG3.g.resources
+E:\SUMMA\repos\BetterGamesLauncher\EindopdrachtPRG3\obj\Debug\EindopdrachtPRG3.Properties.Resources.resources
+E:\SUMMA\repos\BetterGamesLauncher\EindopdrachtPRG3\obj\Debug\EindopdrachtPRG3.csproj.GenerateResource.cache
+E:\SUMMA\repos\BetterGamesLauncher\EindopdrachtPRG3\obj\Debug\EindopdrachtPRG3.csproj.CoreCompileInputs.cache
+E:\SUMMA\repos\BetterGamesLauncher\EindopdrachtPRG3\obj\Debug\EindopdrachtPRG3.csproj.CopyComplete
+=======
+F:\kickoff\BetterGamesLauncher\EindopdrachtPRG3\bin\Debug\EindopdrachtPRG3.exe.config
+F:\kickoff\BetterGamesLauncher\EindopdrachtPRG3\bin\Debug\EindopdrachtPRG3.exe
+F:\kickoff\BetterGamesLauncher\EindopdrachtPRG3\bin\Debug\EindopdrachtPRG3.pdb
+F:\kickoff\BetterGamesLauncher\EindopdrachtPRG3\bin\Debug\MySql.Data.dll
+F:\kickoff\BetterGamesLauncher\EindopdrachtPRG3\bin\Debug\Google.Protobuf.dll
+F:\kickoff\BetterGamesLauncher\EindopdrachtPRG3\bin\Debug\ZstdNet.dll
+F:\kickoff\BetterGamesLauncher\EindopdrachtPRG3\bin\Debug\K4os.Compression.LZ4.Streams.dll
+F:\kickoff\BetterGamesLauncher\EindopdrachtPRG3\bin\Debug\BouncyCastle.Crypto.dll
+F:\kickoff\BetterGamesLauncher\EindopdrachtPRG3\bin\Debug\Ubiety.Dns.Core.dll
+F:\kickoff\BetterGamesLauncher\EindopdrachtPRG3\bin\Debug\System.Memory.dll
+F:\kickoff\BetterGamesLauncher\EindopdrachtPRG3\bin\Debug\System.Buffers.dll
+F:\kickoff\BetterGamesLauncher\EindopdrachtPRG3\bin\Debug\K4os.Compression.LZ4.dll
+F:\kickoff\BetterGamesLauncher\EindopdrachtPRG3\bin\Debug\K4os.Hash.xxHash.dll
+F:\kickoff\BetterGamesLauncher\EindopdrachtPRG3\bin\Debug\MySql.Data.xml
+F:\kickoff\BetterGamesLauncher\EindopdrachtPRG3\obj\Debug\EindopdrachtPRG3.csproj.AssemblyReference.cache
+F:\kickoff\BetterGamesLauncher\EindopdrachtPRG3\obj\Debug\EindopdrachtPRG3.csproj.SuggestedBindingRedirects.cache
+F:\kickoff\BetterGamesLauncher\EindopdrachtPRG3\obj\Debug\EindopdrachtPRG3.exe.config
+F:\kickoff\BetterGamesLauncher\EindopdrachtPRG3\obj\Debug\MainWindow.g.cs
+F:\kickoff\BetterGamesLauncher\EindopdrachtPRG3\obj\Debug\App.g.cs
+F:\kickoff\BetterGamesLauncher\EindopdrachtPRG3\obj\Debug\EindopdrachtPRG3_MarkupCompile.cache
+F:\kickoff\BetterGamesLauncher\EindopdrachtPRG3\obj\Debug\EindopdrachtPRG3_MarkupCompile.lref
+F:\kickoff\BetterGamesLauncher\EindopdrachtPRG3\obj\Debug\MainWindow.baml
+F:\kickoff\BetterGamesLauncher\EindopdrachtPRG3\obj\Debug\EindopdrachtPRG3.g.resources
+F:\kickoff\BetterGamesLauncher\EindopdrachtPRG3\obj\Debug\EindopdrachtPRG3.Properties.Resources.resources
+F:\kickoff\BetterGamesLauncher\EindopdrachtPRG3\obj\Debug\EindopdrachtPRG3.csproj.GenerateResource.cache
+F:\kickoff\BetterGamesLauncher\EindopdrachtPRG3\obj\Debug\EindopdrachtPRG3.csproj.CoreCompileInputs.cache
+F:\kickoff\BetterGamesLauncher\EindopdrachtPRG3\obj\Debug\EindopdrachtPRG3.csproj.CopyComplete
+F:\kickoff\BetterGamesLauncher\EindopdrachtPRG3\obj\Debug\EindopdrachtPRG3.exe
+F:\kickoff\BetterGamesLauncher\EindopdrachtPRG3\obj\Debug\EindopdrachtPRG3.pdb
+>>>>>>> 4e538bb49160f33f6229a5bbec29786957c6ce19
