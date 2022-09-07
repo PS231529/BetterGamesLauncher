@@ -420,7 +420,15 @@ namespace EindopdrachtPRG3
 
             foreach (string file in files)
             {
-                MessageBox.Show(file.ToString());
+                //MessageBox.Show(file.ToString());
+                StackPanel gamens = new StackPanel();
+                TextBlock textBlock = new TextBlock();
+                textBlock.Text = file.ToString(); 
+                gamens.Children.Add(textBlock);
+                Grid.SetRow(gamens, 0);
+                Grid.SetColumn(gamens, 1);
+                Main.Children.Add(gamens);
+
             }
         }
     }
