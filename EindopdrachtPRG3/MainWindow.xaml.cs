@@ -453,7 +453,8 @@ namespace EindopdrachtPRG3
             //}
 
             var files = Directory.GetDirectories("C:\\Program Files (x86)\\Steam\\steamapps\\common", "*.*", SearchOption.TopDirectoryOnly);
-
+            int xindex = 0;
+            int yindex = 0;
             foreach (string file in files)
             {
                 //MessageBox.Show(file.ToString());
@@ -461,10 +462,17 @@ namespace EindopdrachtPRG3
                 TextBlock textBlock = new TextBlock();
                 textBlock.Text = file.ToString(); 
                 gamens.Children.Add(textBlock);
-                Grid.SetRow(gamens, 0);
-                Grid.SetColumn(gamens, 1);
+                Grid.SetRow(gamens, 0+yindex);
+                Grid.SetColumn(gamens, 1 + xindex);
                 Main.Children.Add(gamens);
+                
+                if (xindex == 5)
+                {
+                    xindex = 0;
+                    yindex++;
+                }
 
+                xindex++;
             }
         }
 
