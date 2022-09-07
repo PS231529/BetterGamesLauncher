@@ -455,24 +455,28 @@ namespace EindopdrachtPRG3
             var files = Directory.GetDirectories("C:\\Program Files (x86)\\Steam\\steamapps\\common", "*.*", SearchOption.TopDirectoryOnly);
             int xindex = 0;
             int yindex = 0;
+            var rsrc = this.FindResource("GameContainerStyle") as Style;
             foreach (string file in files)
             {
                 //MessageBox.Show(file.ToString());
                 StackPanel gamens = new StackPanel();
+                gamens.Style = rsrc;
+                Border border = new Border();
                 TextBlock textBlock = new TextBlock();
-                textBlock.Text = file.ToString(); 
+                textBlock.Text = file.ToString();
+                gamens.Children.Add(border);
                 gamens.Children.Add(textBlock);
                 Grid.SetRow(gamens, 0+yindex);
-                Grid.SetColumn(gamens, 1 + xindex);
+                Grid.SetColumn(gamens, 0 + xindex);
                 Main.Children.Add(gamens);
-                
+                xindex++;
+
                 if (xindex == 5)
                 {
                     xindex = 0;
                     yindex++;
                 }
 
-                xindex++;
             }
         }
 
