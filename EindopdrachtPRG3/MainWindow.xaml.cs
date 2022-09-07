@@ -1,4 +1,5 @@
 ﻿using EindopdrachtPRG3.Classes;
+using Microsoft.Win32;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -188,6 +189,25 @@ namespace EindopdrachtPRG3
                 _connection.Close();
             }
 
+        }
+
+        private void SelectExe(object sender, RoutedEventArgs e)
+        {
+            // Configure open file dialog box
+            var dialog = new Microsoft.Win32.OpenFileDialog();
+            dialog.FileName = "Executable"; // Default file name
+            dialog.DefaultExt = ".exe"; // Default file extension
+            dialog.Filter = "Executables (.exe)|*.exe"; // Filter files by extension
+
+            // Show open file dialog box
+            bool? result = dialog.ShowDialog();
+
+            // Process open file dialog box results
+            if (result == true)
+            {
+                // Open document
+                string filename = dialog.FileName;
+            }
         }
 
         private void myFunction()
@@ -436,9 +456,19 @@ namespace EindopdrachtPRG3
 
             foreach (string file in files)
             {
-                MessageBox.Show(file.ToString());
+                //MessageBox.Show(file.ToString());
+                StackPanel gamens = new StackPanel();
+                TextBlock textBlock = new TextBlock();
+                textBlock.Text = file.ToString(); 
+                gamens.Children.Add(textBlock);
+                Grid.SetRow(gamens, 0);
+                Grid.SetColumn(gamens, 1);
+                Main.Children.Add(gamens);
+
             }
         }
+
+
     }
 }    
 
