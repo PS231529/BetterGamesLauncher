@@ -38,7 +38,6 @@ namespace EindopdrachtPRG3
             //FillDataGrid();
             bool dbexists = CheckDatabaseExists(_checkconnection, "bettergameslauncher");
             MessageBox.Show(dbexists.ToString());
-
             myFunction();
 
         }
@@ -57,6 +56,23 @@ namespace EindopdrachtPRG3
                     mainConn.Close();
                 }
             }
+            migrateTables();
+        }
+
+        static void migrateTables()
+        {
+            MySqlConnection _connection = new MySqlConnection("Server=localhost;Database=BetterGamesLauncher;Uid=root;Pwd=;");
+            //beautiful code
+            using (_connection)
+            {
+                using (MySqlCommand _maincommand = new MySqlCommand("CREATE TABLE `games` (`id` INT(12) NULL AUTO_INCREMENT,`game` VARCHAR(255) NULL,`description` VARCHAR(535) NULL DEFAULT NULL,`image` BLOB NOT NULL,`directory` VARCHAR(255) NOT NULL,`favourite` INT(1) NOT NULL DEFAULT '0',PRIMARY KEY(`id`)) ENGINE = InnoDB; ", _connection))
+                {
+                    _connection.Open();
+                    _maincommand.ExecuteScalar();
+                    _connection.Close();
+                }
+            }
+
         }
 
         private static bool CheckDatabaseExists(MySqlConnection tmpConn, string databaseName)
