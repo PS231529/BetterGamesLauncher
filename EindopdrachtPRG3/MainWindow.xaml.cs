@@ -39,6 +39,7 @@ namespace EindopdrachtPRG3
             bool dbexists = CheckDatabaseExists(_checkconnection, "bettergameslauncher");
             MessageBox.Show(dbexists.ToString());
             myFunction();
+            uitlezen();
 
         }
         
@@ -421,6 +422,22 @@ namespace EindopdrachtPRG3
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void uitlezen()
+        {
+            //string[] dirs = Directory.GetFiles("C:\\Program Files (x86)\\Steam\\steamapps\\common", "*.*", SearchOption.TopDirectoryOnly);
+            //foreach (string dir in dirs)
+            //{
+            //    MessageBox.Show(dirs.ToString());
+            //}
+
+            var files = Directory.GetDirectories("C:\\Program Files (x86)\\Steam\\steamapps\\common", "*.*", SearchOption.TopDirectoryOnly);
+
+            foreach (string file in files)
+            {
+                MessageBox.Show(file.ToString());
+            }
         }
     }
 }    
