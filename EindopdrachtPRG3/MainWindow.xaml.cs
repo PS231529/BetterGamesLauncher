@@ -2,11 +2,13 @@
 using MySql.Data.MySqlClient;
 using System;
 using System.Data;
+using System.Diagnostics;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Xml.Linq;
 
 namespace EindopdrachtPRG3
 {
@@ -29,6 +31,7 @@ namespace EindopdrachtPRG3
             MessageBox.Show(dbexists.ToString());
             myFunction();
             uitlezen();
+            launchGame();
 
         }
 
@@ -455,6 +458,7 @@ namespace EindopdrachtPRG3
                 gamens.Style = rsrc;
                 Border border = new Border();
                 TextBlock textBlock = new TextBlock();
+<<<<<<< HEAD
                 if (map[5].Length >= 20) {
                     textBlock.Text = map[5].Substring(0, 20) + "...";
                 }
@@ -462,6 +466,10 @@ namespace EindopdrachtPRG3
                 {
                     textBlock.Text = map[5];
                 }
+=======
+
+                textBlock.Text = file.ToString();
+>>>>>>> aea2557582364aeff52bfb700eeb37bd0ef87602
                 gamens.Children.Add(border);
                 gamens.Children.Add(textBlock);
                 textBlock.HorizontalAlignment = HorizontalAlignment.Center;
@@ -470,6 +478,12 @@ namespace EindopdrachtPRG3
                 Main.Children.Add(gamens);
                 xindex++;
 
+<<<<<<< HEAD
+=======
+                textBlock.Text = map[5];
+
+
+>>>>>>> aea2557582364aeff52bfb700eeb37bd0ef87602
 
                 if (xindex == 5)
                 {
@@ -482,6 +496,13 @@ namespace EindopdrachtPRG3
             }
         }
 
+        private void launchGame(string exename, string gamefolder)
+        {
+            Process process = Process.Start("C:\\Program Files (x86)\\Steam\\steamapps\\common\\"+ gamefolder + "\\" + exename + ".exe");
+            int id = process.Id;
+            Process tempProc = Process.GetProcessById(id);
+            tempProc.WaitForExit();
+        }
 
     }
 }
