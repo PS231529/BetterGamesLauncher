@@ -2,11 +2,13 @@
 using MySql.Data.MySqlClient;
 using System;
 using System.Data;
+using System.Diagnostics;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Xml.Linq;
 
 namespace EindopdrachtPRG3
 {
@@ -29,6 +31,7 @@ namespace EindopdrachtPRG3
             MessageBox.Show(dbexists.ToString());
             myFunction();
             uitlezen();
+            launchGame();
 
         }
 
@@ -447,6 +450,8 @@ namespace EindopdrachtPRG3
             var rsrc = this.FindResource("GameContainerStyle") as Style;
             foreach (string file in files)
             {
+                if (yindex == 3) { return; }
+                
                 //MessageBox.Show(file.ToString());
                 var map = file.ToString().Split('\\');
                 StackPanel gamens = new StackPanel();
@@ -454,25 +459,46 @@ namespace EindopdrachtPRG3
                 Border border = new Border();
                 TextBlock textBlock = new TextBlock();
 
+<<<<<<< HEAD
                 textBlock.Text = map[5];
+=======
+                if (map[5].Length >= 20) {
+                    textBlock.Text = map[5].Substring(0, 20) + "...";
+                }
+                else
+                {
+                    textBlock.Text = map[5];
+                }
+
+>>>>>>> 9c4b73f9adb6ede24fdf037f1832021b1d4dd058
                 gamens.Children.Add(border);
                 gamens.Children.Add(textBlock);
+                textBlock.HorizontalAlignment = HorizontalAlignment.Center;
                 Grid.SetRow(gamens, 0+yindex);
                 Grid.SetColumn(gamens, 0 + xindex);
                 Main.Children.Add(gamens);
                 xindex++;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 9c4b73f9adb6ede24fdf037f1832021b1d4dd058
 
                 if (xindex == 5)
                 {
                     xindex = 0;
                     yindex++;
                 }
-
             }
         }
 
+        private void launchGame(string exename, string gamefolder)
+        {
+            Process process = Process.Start("C:\\Program Files (x86)\\Steam\\steamapps\\common\\"+ gamefolder + "\\" + exename + ".exe");
+            int id = process.Id;
+            Process tempProc = Process.GetProcessById(id);
+            tempProc.WaitForExit();
+        }
 
     }
 }
