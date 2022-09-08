@@ -4,12 +4,20 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
+F:\kickoff\BetterGamesLauncher\EindopdrachtPRG3\obj\Debug\
+=======
 E:\SUMMA\repos\BetterGamesLauncher\EindopdrachtPRG3\obj\Debug\
+>>>>>>> 9c4b73f9adb6ede24fdf037f1832021b1d4dd058
 EindopdrachtPRG3
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
+F:\kickoff\BetterGamesLauncher\EindopdrachtPRG3\App.xaml
+=======
 E:\SUMMA\repos\BetterGamesLauncher\EindopdrachtPRG3\App.xaml
+>>>>>>> 9c4b73f9adb6ede24fdf037f1832021b1d4dd058
 1219584333
 
 6-700499033

@@ -464,6 +464,9 @@ namespace EindopdrachtPRG3
                 Border border = new Border();
                 TextBlock textBlock = new TextBlock();
 
+<<<<<<< HEAD
+                textBlock.Text = map[5];
+=======
                 if (map[5].Length >= 20) {
                     textBlock.Text = map[5].Substring(0, 20) + "...";
                 }
@@ -472,6 +475,7 @@ namespace EindopdrachtPRG3
                     textBlock.Text = map[5];
                 }
 
+>>>>>>> 9c4b73f9adb6ede24fdf037f1832021b1d4dd058
                 gamens.Children.Add(border);
                 gamens.Children.Add(textBlock);
                 textBlock.HorizontalAlignment = HorizontalAlignment.Center;
@@ -479,6 +483,11 @@ namespace EindopdrachtPRG3
                 Grid.SetColumn(gamens, 0 + xindex);
                 Main.Children.Add(gamens);
                 xindex++;
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 9c4b73f9adb6ede24fdf037f1832021b1d4dd058
 
                 if (xindex == 5)
                 {
