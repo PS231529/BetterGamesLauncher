@@ -458,7 +458,7 @@ namespace EindopdrachtPRG3
                 gamens.Style = rsrc;
                 Border border = new Border();
                 TextBlock textBlock = new TextBlock();
-<<<<<<< HEAD
+
                 if (map[5].Length >= 20) {
                     textBlock.Text = map[5].Substring(0, 20) + "...";
                 }
@@ -466,10 +466,7 @@ namespace EindopdrachtPRG3
                 {
                     textBlock.Text = map[5];
                 }
-=======
 
-                textBlock.Text = file.ToString();
->>>>>>> aea2557582364aeff52bfb700eeb37bd0ef87602
                 gamens.Children.Add(border);
                 gamens.Children.Add(textBlock);
                 textBlock.HorizontalAlignment = HorizontalAlignment.Center;
@@ -478,21 +475,11 @@ namespace EindopdrachtPRG3
                 Main.Children.Add(gamens);
                 xindex++;
 
-<<<<<<< HEAD
-=======
-                textBlock.Text = map[5];
-
-
->>>>>>> aea2557582364aeff52bfb700eeb37bd0ef87602
-
                 if (xindex == 5)
                 {
                     xindex = 0;
                     yindex++;
                 }
-
-
-
             }
         }
 
