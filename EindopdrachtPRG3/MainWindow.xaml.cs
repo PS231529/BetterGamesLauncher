@@ -447,33 +447,37 @@ namespace EindopdrachtPRG3
             var rsrc = this.FindResource("GameContainerStyle") as Style;
             foreach (string file in files)
             {
+                if (yindex == 3) { return; }
+                
                 //MessageBox.Show(file.ToString());
                 var map = file.ToString().Split('\\');
                 StackPanel gamens = new StackPanel();
                 gamens.Style = rsrc;
                 Border border = new Border();
                 TextBlock textBlock = new TextBlock();
-<<<<<<< HEAD
-                textBlock.Text = file.ToString();
+                if (map[5].Length >= 20) {
+                    textBlock.Text = map[5].Substring(0, 20) + "...";
+                }
+                else
+                {
+                    textBlock.Text = map[5];
+                }
                 gamens.Children.Add(border);
                 gamens.Children.Add(textBlock);
+                textBlock.HorizontalAlignment = HorizontalAlignment.Center;
                 Grid.SetRow(gamens, 0+yindex);
                 Grid.SetColumn(gamens, 0 + xindex);
                 Main.Children.Add(gamens);
                 xindex++;
-=======
-                textBlock.Text = map[5];
-                gamens.Children.Add(textBlock);
-                Grid.SetRow(gamens, 0 + yindex);
-                Grid.SetColumn(gamens, 1 + xindex);
-                Main.Children.Add(gamens);
->>>>>>> 39e1b4da99177f7843f8429aa638504586955f90
+
 
                 if (xindex == 5)
                 {
                     xindex = 0;
                     yindex++;
                 }
+
+
 
             }
         }

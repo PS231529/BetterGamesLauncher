@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EindopdrachtPRG3"
         mc:Ignorable="d"
-        Title="MainWindow" MinHeight="550" MaxHeight="550" MinWidth="800" MaxWidth="800" Height="550" Width="800" Background="#121212" ResizeMode="NoResize" WindowStyle="None">
+        Title="MainWindow" MinHeight="550" MaxHeight="550" MinWidth="1000" MaxWidth="1000" Height="550" Width="800" Background="#121212" ResizeMode="NoResize" WindowStyle="None">
 
     <Window.Resources>
         <Style TargetType="StackPanel" x:Key="GameContainerStyle">
@@ -16,7 +16,7 @@
                 <Style TargetType="Border">
                     <Setter Property="BorderBrush" Value="White" />
                     <Setter Property="BorderThickness" Value="1" />
-                    <Setter Property="Margin" Value="4 10"></Setter>
+                    <Setter Property="Margin" Value="18 8"></Setter>
                     <Setter Property="Height" Value="140"></Setter>
 
                 </Style>
@@ -27,9 +27,18 @@
 
     <Grid>
         <Grid Height="15" VerticalAlignment="Top">
-            <Button Name="CloseButton" Content="x" Height="24" Width="15" Background="Transparent"  BorderThickness="0" VerticalAlignment="Center" HorizontalAlignment="Left" Click="CloseButton_Click" Margin="785,0,0,0" Foreground="#FF5F5E5E">
+            <Button Name="CloseButton" Content="x" Height="20" Background="Transparent"  BorderThickness="0" VerticalAlignment="Top" Click="CloseButton_Click" Margin="985,-5,0,0" Foreground="#FF5F5E5E" HorizontalAlignment="Left" Width="15">
                 <Button.Resources>
+                    <Style TargetType="Button">
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="Red" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
                     <Style TargetType="Border">
+                        <!-- on hover change background color to red-->
+
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </Button.Resources>
@@ -74,7 +83,7 @@
                 </StackPanel>
 
             </Grid>
-            <Grid x:Name="Main" Grid.Column="1" Margin="0,22,0,10">
+            <Grid x:Name="Main" Margin="205,22,0,10" Grid.ColumnSpan="2">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition/>
