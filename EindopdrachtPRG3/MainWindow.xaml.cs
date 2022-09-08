@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Xml.Linq;
@@ -31,8 +32,6 @@ namespace EindopdrachtPRG3
             MessageBox.Show(dbexists.ToString());
             myFunction();
             uitlezen();
-            launchGame();
-
         }
 
         #region OnStartup
@@ -456,6 +455,12 @@ namespace EindopdrachtPRG3
                 var map = file.ToString().Split('\\');
                 StackPanel gamens = new StackPanel();
                 gamens.Style = rsrc;
+                //gamens onclick run function
+                string balls = map[5].ToString();
+                gamens.MouseLeftButtonDown += new MouseButtonEventHandler(getExe);
+                gamens.Tag = balls;
+
+
                 Border border = new Border();
                 TextBlock textBlock = new TextBlock();
 
@@ -482,10 +487,28 @@ namespace EindopdrachtPRG3
                 }
             }
         }
-
-        private void launchGame(string exename, string gamefolder)
+        
+        private void getExe(object sender, MouseButtonEventArgs e)
         {
-            Process process = Process.Start("C:\\Program Files (x86)\\Steam\\steamapps\\common\\"+ gamefolder + "\\" + exename + ".exe");
+            var gamedir = ((StackPanel)sender).Tag.ToString();
+            var path = "C:\\Program Files (x86)\\Steam\\steamapps\\common\\" + ((StackPanel)sender).Tag.ToString();
+            
+            string[] files = Directory.GetFiles(path);
+
+            foreach (string file in files)
+            {
+                if (file.Contains(".exe"))
+                {
+                    MessageBox.Show(file);
+                    launchGame(file.ToString());
+                }
+            }
+            
+        }
+
+        private void launchGame(string exepath)
+        {
+            Process process = Process.Start(exepath);
             int id = process.Id;
             Process tempProc = Process.GetProcessById(id);
             tempProc.WaitForExit();
